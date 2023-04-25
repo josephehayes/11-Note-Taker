@@ -3,12 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 const readAndParseData = () => {
-    const data = fs.readFileSync(path.join(__dirname, '../db/db.json'), 'utf8');
+    const data = fs.readFileSync(path.join(__dirname, '../../db/db.json'), 'utf8');
     return JSON.parse(data);
   };
   
   const writeData = (data) => {
-    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(data), 'utf8');
+    fs.writeFileSync(path.join(__dirname, '../../db/db.json'), JSON.stringify(data), 'utf8');
   };
   
   router.get('/api/notes', (req, res) => {
